@@ -1,0 +1,38 @@
+.cveTable {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 5px;
+  
+    thead {
+        height: 30px;
+        font-size: 16px;
+        background-color:white;
+        line-height: 30px; 
+        th {
+            background-color:#007bff;
+            color: white;
+  
+        }
+    }
+    
+    tbody {
+        font-size: 12px;
+        overflow-y: scroll;
+        height:450px;
+        position: absolute;
+    }
+   tr {
+      width: 98%;
+      table-layout: fixed;
+      display: inline-table;
+  }
+    
+  
+  }
+  .cveItem {
+    background-color: #ffc107;
+    border: 1px solid black;
+    width: 120px;
+    height: 20px;
+    text-align: center;
+  }

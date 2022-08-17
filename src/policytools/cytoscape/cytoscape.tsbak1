@@ -1,0 +1,67 @@
+import React from "react";
+import CytoscapeComponent from "react-cytoscapejs";
+import { List, Header } from "semantic-ui-react";
+import { styles } from "./cytoStyle";
+import cytoscape, { Stylesheet } from "cytoscape";
+
+function Cytoscape(props) {
+  const cyRef = React.useRef<cytoscape.Core | undefined>();
+  
+  return (
+    <div>
+      {props.data && (
+        const cy = (window.cy = cytoscape({
+          container: document.getElementById("cy"),
+          boxSelectionEnabled: false,
+          autounselectify: true,
+          elements: {props.data}
+          stylesheet:{styles}
+          layout : {{ name: "cose" }}
+          style: {{
+            height: "600px",
+            width: "100%",
+            margin: "0px auto"
+        }));
+        
+        const animateEdges = () => {
+          cy.edges().style({ "line-dash-offset": 0 });
+          cy.edges().animate({
+            style: {
+              "line-dash-offset": -300
+            },
+            duration: 5000,
+            complete: () => animateEdges()
+          });
+        };
+        animateEdges();
+        
+        const click = () => {
+          cy.on("tap", "node", function (e) {
+            const url = e.target.data("url");
+            if (url && url !== "") {
+              window.open(url);
+            }
+          });
+        };
+        click();
+      )}
+      {props.id !== "" && (
+        <div
+          style={{
+            width: "80%",
+            margin: "0px auto"
+          }}
+        >
+          <Header as="h3">Referenced Policies</Header>
+          <List divided relaxed>
+            {props.policies.sort().map((pol, index) => (
+              <List.Item key={index}>{pol}</List.Item>
+            ))}
+          </List>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default Cytoscape;

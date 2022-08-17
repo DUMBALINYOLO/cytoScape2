@@ -1,0 +1,160 @@
+.TopCve {
+  background-color: white;
+  text-align: center;
+  overflow: initial;
+
+}
+
+.TopCveTitle {
+  background-color: #4997a6;
+  color: white;
+  text-align: center;
+  overflow: initial;
+
+}
+
+
+.TopCveTooltip {
+  pointer-events: none;
+  position: fixed;
+  display: none;
+  min-width: 5px;
+  height: auto;
+  background: none repeat scroll 0 0 #ffffff;
+  padding: 4px;
+  border-radius: 4px;
+  text-align: left;
+  color: #5B6770;
+  box-shadow: 0px 3px 9px rgba(0, 0, 0, .15);
+  overflow: initial;
+
+}
+
+.TopCveContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.cveButon {
+  flex-grow: 1;
+  flex-basis: 50%;
+}
+
+
+.TopCveItem {
+  width: 95%;
+  justify-content: space-between;
+  padding: 1% 0; /* 32:18, i.e. 16:9 */
+  margin-bottom: 1%; /* (100-32*3)/2 */
+  margin-bottom: 6px;
+  border: 1px solid #c6c6c6;
+  overflow: initial;
+
+}
+
+.TopCveItem:hover{// makes the button grey when mouse is over it
+  background-color: lightgrey;
+}
+
+.hoverButton {
+  background-color: #3d74ba;
+  color: white;
+  margin:  5px;
+  margin-top:  10px;
+  height:  60px;
+  width:  80px;
+  border:  solid 1px #3d74ba;
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.tooltiptext {
+  width: 200px;//size of the hover over
+  height: 250px;
+  background-color: #FFFF99;
+  color: black;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: fixed;//makes sure they all have the same location
+  z-index: 1;
+  top: 150px;//distance from the top
+  transition:0s 1s;
+  opacity: 0.9;
+  transition:0s;
+  display: none;
+
+
+}
+.tooltip_left {
+  left: 100px;
+}//makes the hover over visible
+.tooltip_right {
+  left: 200px;
+}
+
+.toolButton {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.HoverOver__Buttons{
+  text-align: left;
+  position: fixed;//makes sure they all have the same location
+  z-index: 1;
+  top: 350px;
+  padding: 5px;
+}
+
+#hoverOverMsg > .HoverOver__Buttons__alignleft{
+  
+  left: 60px;
+  padding-bottom: 5px;
+  float: left;
+  font-size: 14px;
+}
+
+.HoverOver__Buttons__alignright {
+  left: 150px;
+  float: right;
+  font-size: 14px;
+  margin-right: 20px;
+}
+
+.hoverTable {
+  width: 98%;
+  border-collapse: separate;
+  border-spacing: 0px;
+
+  thead {
+      display: none;
+  }
+  
+  tbody {
+      font-size: 12px;
+      overflow-y: auto;
+      height:470px;
+      position: absolute;
+      margin-right:10px;
+  }
+ tr {
+    width: 98%;
+    height: 10px;
+    table-layout: fixed;
+    display: inline-table;
+   
+}
+ 
+
+}
+ 
+
+

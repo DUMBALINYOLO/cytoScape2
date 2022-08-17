@@ -1,0 +1,32 @@
+
+text {
+  pointer-events: none;
+}
+.grandparent text {
+  font-weight: bold;
+}
+rect {
+  fill: none;
+  stroke: #fff;
+}
+rect.parent,
+.grandparent rect {
+  stroke-width: 2px;
+}
+.grandparent rect {
+  fill: rgb(182, 181, 181);
+}
+.grandparent:hover rect {
+  fill: rgb(163, 162, 162)
+}
+.children rect.parent,
+.grandparent rect {
+  cursor: pointer;
+}
+.children rect.parent {
+  fill: #bbb;
+  fill-opacity: 0.5;
+}
+.children:hover rect.child {
+  fill: #bbb;
+}
